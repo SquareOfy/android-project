@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/background"
+    tools:context=".MainActivity">
+
+    <!-- 고양이 로고 -->
+    <ImageView
+        android:id="@+id/main_logo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/cat_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/logo_text"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="100dp"
+        android:contentDescription="CAT_LOGO" />
+
+    <!-- "CATCHER" 텍스트 -->
+    <TextView
+        android:id="@+id/logo_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CATCHER"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/main_logo"
+        android:layout_marginTop="16dp" />
+
+
+    <TextView
+        android:id="@+id/btn_todo"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:background="@drawable/menu_btn"
+        android:backgroundTint="@color/soft_pink"
+        android:text="TO DO"
+        android:textStyle="bold"
+        android:textColor="@color/gray"
+        android:gravity="center"
+        android:elevation="6dp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_alarm"
+        app:layout_constraintTop_toBottomOf="@id/logo_text"
+        android:layout_marginTop="80dp"
+        />
+    <TextView
+        android:id="@+id/btn_alarm"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:background="@drawable/menu_btn"
+        android:backgroundTint="@color/pink"
+        android:text="ALARM"
+        android:textStyle="bold"
+        android:textColor="@color/gray"
+        android:elevation="6dp"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@id/btn_todo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btn_todo"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/btn_news"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:background="@drawable/menu_btn"
+        android:backgroundTint="@color/light_green"
+        android:text="NEWS"
+        android:textStyle="bold"
+        android:textColor="@color/gray"
+        android:elevation="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btn_catch"
+        app:layout_constraintTop_toBottomOf="@id/btn_todo"
+        android:layout_marginTop="16dp"
+        android:textSize="20sp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/btn_catch"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
+        android:background="@drawable/menu_btn"
+        android:backgroundTint="@color/soft_green"
+        android:text="CATCH"
+        android:textStyle="bold"
+        android:textColor="@color/gray"
+        android:elevation="6dp"
+        app:layout_constraintStart_toEndOf="@id/btn_news"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btn_news"
+        android:textSize="20sp"
+        android:gravity="center"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
