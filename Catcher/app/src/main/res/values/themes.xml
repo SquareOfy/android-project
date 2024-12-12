@@ -13,4 +13,9 @@
         <item name="android:textSize">30sp</item>
         <item name="colorControlNormal">@color/gray</item>
     </style>
+
+    <style name="RoundCornerBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bottom_sheet_round</item>
+    </style>
+
 </resources>
